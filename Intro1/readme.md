@@ -28,3 +28,7 @@ $PS=">"
 
 vim file.txt - used to open the file.txt in vim. ( vim is a text editor )
 cat file.txt - used to print the content of file.txt
+man cat - will tell you more about cat functionanlity
+man ascii | head -43 | tail -16 - it is used to print the first 43 and last 16 lines of the ascii manual entry
+man ascii | head -43 | tail -16 > file.txt - it will save the content into file.txt file
+open Intro1/ = will open the folder in GUI
