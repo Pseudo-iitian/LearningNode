@@ -1,0 +1,12 @@
+{
+  "name": "3nodehelloworld",
+  "version": "1.0.0",
+  "description": "npm stand for node package manager.",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "youtube": "node hello.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
