@@ -1,0 +1,13 @@
+1- REST API's
+
+GET //api/USERS - list all the USERS
+GET//api/USERS/1 - GET THE USER WITH ID 1
+GET/api/USERS/2 - GET THE USER WITH ID 2
+
+POST/api/USERS - CREATE THE USER
+
+PATCH/api/USERS/1 - EDIT THE USER WITH ID 1
+DELETE/api/USERS/1- DELETE THE USER ID 1
+
+
+this data will be hardoded using https://www.mockaroo.com/
