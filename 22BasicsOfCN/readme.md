@@ -76,4 +76,70 @@ Network Protocol Stack
 
 InteraNet
 - it is used by private company, where every one is connected with private network (interanet).
-- 
+
+Network Protocol Stack 
+OSI layer (7 layer)
+- Application layer, presentation layer, session layer, transport layer, network layer, data link layer, physical layer.
+
+TCP/IP layer (5 layer)
+- Application, transport, network , data , physical layer.
+- Application layer - end application like- email, chat, browser (where you start you journey of sending the data)
+- Presentation layer - how to present the data, compression, encryption, etc done here. (setup on the end devices)
+- session layer - user session management (login or logout)
+- transport layer - divide big chunk of date to small chunks and manage these chunks.
+- network layer - how routing of packets will be done on the network.
+- data link layer - error/flow control, multiplexing demultiplexing, handles addressing, etc.
+- physical layer - data arrives at the cables wires in electronic forms, etc.
+65 done
+
+Application layer
+- Roles and responsibilty for this layer
+- Writing/providing data off to the network.
+- reading and writing the data from user
+- contains applications that helps user to interact on the network.
+- error handling and recovery can also be done.
+- where it exist -> it exist on end systems only, like mobile, computers, etc.
+- instant messaging, www, voip, email, directly on the end systems.
+66 done
+
+Client Server Architecture
+- It is a 2 lever architecture
+- client side- user interacts
+- server side - where user interacts.
+- Servers -> This Process controls access to a centralized resource or service such as a website/webapps.
+- clients - frontend where user interacts.
+
+P2P architecture (peer to peer)
+- torrent is based on peero to peer architecture
+- seeding and leaching 
+- where every other server is helping other to access the data
+- scalable
+-
+
+Hybrid architecture
+- it is a combination of CS and P2P architecture
+67 done
+
+HTTP
+- Hyper text transfer protocol 
+- hyper text kind of a documnet which has another document links to each other.
+- Objects : web pages are the main objects that contains other objects.
+- Some other objects can be mp3 file, png, jpg, etc.
+- every object has a url.
+- it defines the whole procedure on how client & server will interact.
+- http is also categorized as request-response protocols.
+- http is stateless protocol. (server do not stores any information about the client).
+
+
+URL 
+- uniform resource locator
+- protocol, 
+- hostname
+- location of file/object
+- aguement like ? etc.
+- http://flipkar.com/image/23.jpg?q=50
+- The first message is the HTTP request, the second message is the HTTP response.
+- http is also categorized as request-response protocols.
+- http is stateless protocol. (server do not stores any information about the client).
+- 68 done
+
