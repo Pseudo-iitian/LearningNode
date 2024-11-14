@@ -1,0 +1,16 @@
+{
+  "name": "16projectcalc",
+  "version": "1.0.0",
+  "main": "calculator.js",
+  "scripts": {
+    "start": "codemon calculator"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "codemon": "^0.1.31-development",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}

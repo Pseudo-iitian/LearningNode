@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+
+<body>
+    <!-- we have to create a form here -->
+    <h1> URL Shortener </h1>
+    <% if(locals.id){ %>
+        <p>URL Generated:
+            <span id="generated-url"
+                style="color: blue;">https://didactic-tribble-5jxpjq447q727wqw-8001.app.github.dev/url/<%=id %></span>
+            <button onclick="copyToClipboard()">Copy URL</button>
+        </p>
+        <% } %>
+            <div>
+                <form action="/url" method="post">
+                    <label>Enter your original URL: </label>
+                    <input type="text" placeholder="https://google.com" name="url">
+                    <button type="submit">Generate</button>
+                </form>
+            </div>
+
+            <div>
+                <form action="/short-urls" method="get">
+                    <button type="submit">GetVisitHistory</button>
+                </form>
+            </div>
+
+            <script>
+                function copyToClipboard() {
+                    // Get the text inside the span element
+                    const urlText = document.getElementById('generated-url').textContent;
+
+                    // Create a temporary input element to hold the text for copying
+                    const tempInput = document.createElement('input');
+                    tempInput.value = urlText;
+                    document.body.appendChild(tempInput);
+
+                    // Select the text inside the temporary input and copy to clipboard
+                    tempInput.select();
+                    document.execCommand('copy');
+
+                    // Remove the temporary input element
+                    document.body.removeChild(tempInput);
+
+                    // Optional: Alert user that URL is copied
+                    alert("URL copied to clipboard!");
+                }
+            </script>
+
+</body>
+
+</html>
