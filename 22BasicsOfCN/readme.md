@@ -143,3 +143,117 @@ URL
 - http is stateless protocol. (server do not stores any information about the client).
 - 68 done
 
+- So, a lot of application layer protocol depend on lower lever protocol of transport layer.
+- In transport layer there are 2 main protocols, 
+1- TCP and 2- UDP
+- HTTP depends on TCP, to setup http we need to set up TCP connection first. upon which http connection established and then one time request and response 
+have been made.
+- payload is the data that you want to send.
+
+- There are two types of HTTP connections.
+1- Persistent HTTPn - tcp connection success, http connection made, then request and response for the same http connection.
+2- non-persistent HTTP - here tcp connection made, http connection made, then a cycle of request and response made. after this http connection brakes.
+then we need to further made an http connection, then a cycle of rr, then brakes, this do so again and again.
+3- XHR - xml http request. (non persistent http connection)
+69 done
+
+HTTP req msg (header)
+- any http message are plane ASCII text
+- host, method, statuscode, referer policy, etc.
+- method, url, version (how fast is the encoding of the data)
+- method (get) , URL (www.booking.com)
+- which device is being used
+- JWT token is also used in header (authentication)
+- headers are the extra peace of information at the request side as well as response side.
+
+There are multiple HTTP methods, 
+1- GET, PUT, POST, patch, DELETE.
+- it tells what the server going to do based on these request.
+- GET -> is used to getting some request data.
+- POST -> put some data on the server. (when you want make some changes on the server side.)
+- PUT -> updating on server (complete)
+- Patch -> updating on server (partial)
+- delete -> delete any object from the server.
+- user_agent in the header -> speicifies the client. Usefull when server has different web pages that exist for different devices.
+- accepted language -> specifies the prefered language.
+- connection -> (open : persistent http connection ) or (close : non-persistent http connections).
+- http status code -> 100 to 199, 200 to 299, 300 to 399, 400 to 499, 500 to 599.
+70 done
+
+Cookies
+- These are mainly concerned towards privacy.
+- HTTP is stateless protocol & a lot of time user session is required.
+- How cookies work ?
+- cookies are unique identifier strings. These are set by the server through HTTP headers.
+- as soon as, a cookie are stored, it is sent along with subsequent http request to the same server.
+- This allow server to know who is connecting it and hence serve the control accordingly.
+- SET COOKIE HEADER -> when a server wants to set a cookie, it includes set-cookie:value in the http response.
+- this "value" is stored in the cookie file of the browser.
+- it can contains domain, expire time, inititate dtime, etc.
+- if shared in a wrong manner can lead to loose of privacy.
+71 done
+
+Email: SMTP (email js is also there)
+- for executing the functionality of email, 
+- SMTP (simple mail transfer protocol) is used.
+- Once more protocol named POP3 is used in combination with SMTP.
+- One is used to send emails that are stored in the suer's inbox & other is used to retrieve emails sent to be a user.
+- SMTP used the low layer protocol (TCP protocol from trasport layer).
+- Connections : for SMTP is setup or part 25
+- Mail clients gives the actual interface to send and receive mails (gmail, outlook, etc.)
+- How SMTP works ?
+- > when an email is sent, it is sent to the sender's smtpm sever using SMTP protocol,
+- > Also the SMTP servers is configured in the mail clients.
+- > The SMTP server places the email on a message queue.
+- > Then SMTP server intiate a connection with receiver's SMTP servers and conducts an intial SMTP handshake.
+- > Then finally it sends the email to receipents SMTP server.
+- > then email is downloaded from the smtp server of recievers.
+- > SMTP is used for sending the email, POP3/IMAP is used for downloading the email.
+- > If receipients SMTP server is offline, the sender SMTP server tries again and again after some delta time (min).
+- > if there is a threshold after which it stops seding the emails & marks it not deleivered.
+72 done
+
+IMAP and POP
+- POP stands for post office protocol.
+- Connect
+- authorize
+- transaction
+- update
+Two modes of modes of POP
+- download & keep
+- download & delete
+
+IMAP (internet message access protocol)
+- emails are kept on the server and not deleted, 
+- local copies of the emails are cached on each device.
+- if an email is deleted by user manually then only it gets deleted from server.
+73 done
+
+BIT Torrent
+- Protocol for peer to peer file sharing. A bit torrrent client is an application that uses this protocol.
+- follows a hybrid architecture instead of p2p.
+- data is downloaded and uploaded directly to and by peers.
+- allow easy exhange of large files.
+- a bit torrent client request file from multiple clients in parallet.
+- small chunks of data is called peers.
+- if a client downloads a piece successfully, bit torrent tells other clients that ok, this client has this piece of data downloaded. so they can 
+download it too.
+- these collection of collaborating clients are called "swarms".
+
+Torrent file
+- client joins a swarm by downloading a (.torrent file) that tells the following info.
+- 1-> gives info about the file like how by it is , the size of its pieces & how it starts interactly other clients.
+- 2-> gives details about a tracker (server that tracks woh is participating in the swarm).
+- when clients joins a swarm, it rep a list of clients from the tracker, and starts communication with these client over TCP(initially as a "leecher")
+- when the size of  swarm increase, we can use something like trackerless torrents that use DHT (distributed hash tables)
+- 1)- it's a distributed coordination mechanism
+- 2)- information on swarm accross many nodes.
+
+What exactly bit torrent does ? 
+- it breaks up file into N pieces.
+- for throughput, pieces are large : 256kb - 1MB.
+- for latency, broken into supieces.
+- this is to ensure that TCP stream transferring the file is long client enough that it's congention windows can grow to reasonable size.
+
+2- piece also ensures integrity ?
+- 

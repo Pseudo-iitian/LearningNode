@@ -1,0 +1,2 @@
+link - https://fakerapi.it/api/v1/persons
+fetch is a get request by default

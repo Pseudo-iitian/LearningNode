@@ -1,0 +1,4 @@
+zod is a better way to do input validation or schema validation.
+coercion -> to push someone to do something
+-- 
+

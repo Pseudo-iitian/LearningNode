@@ -1,0 +1,39 @@
+// middle wares are the prechecks
+
+Example 1 - suppose there are some prechecks like insurance validation, Blood Test and BP checks.
+in this case suppose, one person will be checked at a time.
+this checks should not be done in the cabin
+
+i.e.
+app.get('/health-checkup', (req, res)=>{
+    // suppose it as a cabin and the three checks can't be done here.
+    // so we need some thing else such as prechecks that should be done by compounder before entering in to this.
+    // this compunder is middlwares.
+    res.send("your heart is healthy");
+})
+
+// doubt 1 - like adding multiple call back function in get, post, then will there need to send req, res to it or not 
+-- yes we can add multiple call back functions, and we do not need to pass req res in calling function just write the name and in the defintion you can add parametere
+as (feq, res, next).
+// doubt 2 - without using headers how you can access username and password or kidneyId directly you need to user this as req.headers.username or not .
+-- no you can't access username directly you need to defined it already i.e.     const username = req.headers.username;
+
+3- find average time your server is taking to handle request
+
+
+4- input validation 
+5- if you not use app.use(express.json()) then body will not get extracted
+
+6- why you need input validation ?
+- you need input validation so that any one can hit with any data to your bakend and brake the system, but you do not want him to do so .
+so there is need of input validation to check if the user is entering the desired value or not.
+
+7- global catches are made to handle such errors (err after braking of the system)
+- app.use(function(err,req,res,next){
+    res.json({
+        message: "some thing went wrong please try again after some time."
+    })
+})
+- helps user to get a better error messages
+
+-- 1:09:57
