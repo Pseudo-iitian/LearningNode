@@ -13,3 +13,16 @@ Json Web Token
 - anyone can see the original output given the signature
 - signature can be verified only using the password.
 
+MongoDB let's you create databases
+in each DB, it lets you create tables (collections)
+in each table, it lets you dump JSON data
+it is schema less
+it scale well and it is a descent choice for most use cases
+
+There are various types of databases
+1- Graph DBs
+2- Vector DBs
+3- SQL DBs
+4- NOSQL DBs
+Mongodb is a no sql database
+
