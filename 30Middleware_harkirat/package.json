@@ -1,0 +1,14 @@
+{
+  "name": "30middleware_harkirat",
+  "version": "1.0.0",
+  "description": "Middleware - express is a routing and middleware web framework that has minimal functionality of its own - An express application is essentially a series of middleware function calls. - Middleware functions are functions that have access to the request object(req), the response object(res), and the next middleware function in the application's request-response cycle. the next middleware function is commonly denoted by a variable named text.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
